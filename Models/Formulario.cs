@@ -4,24 +4,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExamenPC1.Models
 {
-    [Table("t_personas")]
+    [Table("TB_personas")]
     public class Formulario
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "Por favor ingrese Nombre")]
+        [Required(ErrorMessage = "Ingrese Nombre")]
         [Display(Name="Nombre")]
         [Column("Nombre")]
         public string Nombre { get; set; }
 
-        [Required(ErrorMessage = "Por favor ingrese Apellido")]
+        [Required(ErrorMessage = "Ingrese Apellido")]
         [Display(Name="Apellido")]
         [Column("Apellido")]
         public string Apellido { get; set; }
 
-        [Required(ErrorMessage = "Por favor ingrese Distrito")]
+        [Required(ErrorMessage = "Ingrese Distrito")]
         [Display(Name="Distrito")]
         [Column("Distrito")]
         public string Distrito { get; set; }
