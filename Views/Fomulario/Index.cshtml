@@ -1,0 +1,49 @@
+@model ExamenPC1.Models.Formulario
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Formulario</h1>
+    <form asp-controller="Formulario" asp-action="Recolectar">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div>
+            Nombre: <input asp-for="Nombre">
+        </div><br>
+        <div>
+            Apellido: <input asp-for="Apellido">
+        </div><br>
+        <div>
+            Distrito: <input asp-for="Distrito">
+        </div><br>
+        <div>
+            Banco:
+            <Select asp-for="Banco">
+                <option value="BCP">BCP</option>
+                <option value="Continental">Continental</option>
+                <option value="Interbank">Interbank</option>
+                <option value="Scotiabank">Scotiabank</option>
+                <option value="BBVA">BBVA</option>
+            </Select>
+        </div><br>
+        <div>
+            Edad: <input asp-for="Edad">
+        </div><br>
+        <div>
+            Genero: 
+            <input asp-for="Genero" type="radio" class="form-control" value="Masculino"/>
+            <label for="">Masculino</label>
+            <input asp-for="Genero" type="radio" class="form-control" value="Femenino"/>
+            <label for="">Femenino</label>
+        </div><br>
+        <div>
+            Autor: <input asp-for="Autor">
+        </div><br>
+        <input type="submit" value="Guardar">
+    </form>
+    <td>@Html.DisplayTextFor(model => model.Respuesta)</td>
+     
+</div>
+
+
